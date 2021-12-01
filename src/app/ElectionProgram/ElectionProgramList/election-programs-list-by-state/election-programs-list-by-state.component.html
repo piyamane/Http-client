@@ -1,0 +1,48 @@
+<div class="list row">
+  <div class="col-md-12">
+   <h4>Election Program List</h4>
+      <div class="pull-right align-right-end">
+          <button class="btn btn-success btn-lg float-center margin-bottom:4px; justify-content-end text-right"
+          (click)="getElectionProgramsByState()">
+              Search
+          </button>
+          <button class="btn btn-primary" (click) = "onClickEvent()"> Show</button>
+      </div>
+    <div class='panel panel-primary mtop10 '>    
+      <div class='panel-body '>  
+          <div class='table-responsive'>  
+              <table class='table p text-center' style="width:100%">  
+                  <thead>  
+                      <tr>  
+                          <th>Election Program Name</th>  
+                          <th>District Name</th>  
+                          <th>Local Body Name</th>  
+                          <th>Month</th>
+                          <th>Year</th>  
+                      </tr>  
+                  </thead>  
+                  <tbody> 
+                       <tr *ngFor="let electionProgram of electionProgram;">  
+                          <td>{{electionProgram.electionProgramName}}</td>  
+                          <td>{{electionProgram.districtName}}</td>  
+                          <td>{{electionProgram.localBodyName}}</td>  
+                          <td>{{electionProgram.month}}</td>  
+                          <td>{{electionProgram.year}}</td>   
+                          <!-- <td>  
+                              <button  style="margin-right: 2px; margin-bottom: 2px;" class="btn btn-info"
+                              (click)="deleteProduct(product)"> Delete</button> 
+                              <button  style="margin-left: 8px;" class="btn btn-info" (click)="viewEditModal(product)"> Edit</button>  
+                            
+                              <button style="margin-left: 8px;" class="btn btn-info" (click)="viewProductViewModal(product)"> View</button>  
+                              <i class="cui-info info mr-3 icon-muted"></i>
+                           
+                            </td>   -->
+                      </tr>  
+                  </tbody>  
+              </table>  
+          </div>  
+      </div>  
+  </div>  
+  </div>
+ 
+</div>

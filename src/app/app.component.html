@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+</div>
+<h2>Here are we go: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" routerLink="/ElectionProgramsList">Tour of Heroes</a></h2>
+    <app-election-programs-list-by-state (click) = "onChange()" ></app-election-programs-list-by-state>
+    <!-- <app-election-programs-list-by-state></app-election-programs-list-by-state> -->
+  </li>
+  <!-- <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li> -->
+</ul>
+<div class="row">
+  <div class="col-xs-12">
+    <p (clicked)="selected = $event"></p>
+  </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
